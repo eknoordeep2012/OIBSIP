@@ -1,0 +1,730 @@
+
+/* LEARNIFY - ONLINE LEARNING LANDING PAGE */
+
+/* 1. Basic settings */
+:root {
+    --purple: #6554d9;
+    --purple-dark: #4d3db8;
+    --lavender: #f0edff;
+    --ink: #25243a;
+    --muted: #727187;
+    --white: #ffffff;
+    --border: #e9e6f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background-color: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 88%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+/* 2. Navigation */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.footer-links a:hover {
+    color: var(--purple);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.nav-button,
+.primary-button {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background-color: var(--purple-dark);
+}
+
+/* 3. Hero section */
+.hero {
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 4.4vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.benefits-intro h2 span {
+    color: var(--purple);
+}
+
+.hero-text {
+    max-width: 510px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+.text-button {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.text-button:hover {
+    color: var(--purple);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.note-icon {
+    display: grid;
+    place-items: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    color: var(--purple);
+    background-color: var(--lavender);
+    font-weight: 700;
+}
+
+/* 4. Hero illustration using CSS */
+.hero-visual {
+    position: relative;
+    padding: 20px;
+}
+
+.visual-card {
+    min-height: 380px;
+    padding: 28px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #eeebff, #e5f5ff);
+    box-shadow: 0 25px 65px rgba(83, 65, 170, 0.12);
+}
+
+.visual-top,
+.visual-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.visual-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.sparkle {
+    color: var(--purple);
+    font-size: 25px;
+}
+
+.book-illustration {
+    min-height: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.book {
+    width: 145px;
+    height: 190px;
+    border-radius: 8px 18px 18px 8px;
+    box-shadow: 10px 14px 25px rgba(53, 43, 115, 0.2);
+}
+
+.book-back {
+    position: absolute;
+    background-color: #a9a0ed;
+    transform: rotate(12deg) translate(13px, 5px);
+}
+
+.book-front {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: var(--white);
+    background: linear-gradient(150deg, #7766e8, #5140b8);
+    transform: rotate(-7deg);
+}
+
+.book-symbol {
+    font-size: 24px;
+}
+
+.book-title {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: 1px;
+}
+
+.visual-bottom {
+    padding-top: 18px;
+    border-top: 1px solid rgba(101, 84, 217, 0.2);
+}
+
+.visual-bottom strong {
+    font-size: 15px;
+}
+
+.visual-bottom p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.round-arrow {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    color: var(--white);
+    background-color: var(--purple);
+    border-radius: 50%;
+}
+
+.floating-badge {
+    position: absolute;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(37, 36, 58, 0.08);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.badge-top {
+    top: 5px;
+    right: -5px;
+}
+
+.badge-bottom {
+    bottom: 8px;
+    left: -10px;
+}
+
+/* 5. Section headings */
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.benefits-intro h2 {
+    font-size: clamp(30px, 3.5vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p,
+.benefits-intro > p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* 6. Course cards */
+.courses {
+    background-color: #faf9ff;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.course-card {
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background-color: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(83, 65, 170, 0.1);
+}
+
+.course-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.web-icon {
+    color: #5e4ccf;
+    background-color: #eeebff;
+}
+
+.python-icon {
+    color: #247d85;
+    background-color: #e5f7f5;
+}
+
+.ai-icon {
+    color: #a35e2d;
+    background-color: #fff0e2;
+}
+
+.course-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.course-card > p {
+    color: var(--muted);
+    font-size: 14px;
+    min-height: 72px;
+    margin-bottom: 22px;
+}
+
+.course-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.course-link span {
+    font-size: 19px;
+    transition: transform 0.2s ease;
+}
+
+.course-link:hover span {
+    transform: translateX(5px);
+}
+
+/* 7. Benefits */
+.benefits-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.benefits-intro > p {
+    max-width: 430px;
+    margin-bottom: 28px;
+}
+
+.benefit-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 24px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.benefit-number {
+    color: var(--purple);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.benefit-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.benefit-item p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* 8. Inspiration cards */
+.reviews {
+    background-color: #faf9ff;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.review-card {
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background-color: var(--white);
+}
+
+.quote-mark {
+    color: var(--purple);
+    font-size: 44px;
+    line-height: 1;
+}
+
+.review-card > p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0 20px;
+}
+
+.review-author {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.disclaimer {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* 9. Call to action */
+.get-started {
+    padding: 85px 0;
+    color: var(--white);
+    background: linear-gradient(120deg, #5544c7, #7766e8);
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content .eyebrow {
+    color: #e1dcff;
+}
+
+.cta-content h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.cta-content > p {
+    max-width: 560px;
+    margin: 0 auto 28px;
+    color: #eeebff;
+}
+
+.cta-button {
+    color: var(--purple-dark);
+    background-color: var(--white);
+}
+
+.cta-button:hover {
+    background-color: #f0edff;
+}
+
+/* 10. Footer */
+.footer {
+    padding: 45px 0 25px;
+    background-color: #25243a;
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-logo span {
+    color: #afa4ff;
+}
+
+.footer-content > p {
+    color: #c3c1d2;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.copyright {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #454358;
+}
+
+/* 11. Tablet and mobile responsive layout */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero-visual {
+        padding: 10px;
+    }
+
+    .visual-card {
+        padding: 20px;
+    }
+
+    .course-grid,
+    .review-grid {
+        gap: 15px;
+    }
+
+    .course-card {
+        padding: 22px 18px;
+    }
+
+    .benefits-layout {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 4px 0;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(35px, 9vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-visual {
+        max-width: 430px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .visual-card {
+        min-height: 340px;
+    }
+
+    .book-illustration {
+        min-height: 215px;
+    }
+
+    .floating-badge {
+        font-size: 10px;
+        padding: 9px 11px;
+    }
+
+    .badge-top {
+        right: -3px;
+    }
+
+    .badge-bottom {
+        left: -3px;
+    }
+
+    .course-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card > p {
+        min-height: 0;
+    }
+
+    .benefits-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .benefit-item {
+        gap: 16px;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
