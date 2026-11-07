@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="converter">
+
+        <!-- HEADER -->
+
+        <header class="main-header">
+            <div class="logo">🌡️</div>
+            <h1>Smart Temperature Converter</h1>
+            <p>Convert, monitor and compare temperatures</p>
+        </header>
+
+
+        <!-- TEMPERATURE CONVERTER -->
+
+        <section class="conversion-section">
+
+            <h2>Temperature Converter</h2>
+            <p>Convert temperatures quickly and easily.</p>
+
+            <label for="temperature">Enter Temperature</label>
+
+            <input
+                type="number"
+                id="temperature"
+                placeholder="Enter temperature value"
+            >
+
+            <div class="units">
+
+                <div>
+                    <label for="fromUnit">From</label>
+
+                    <select id="fromUnit">
+                        <option value="C">Celsius (°C)</option>
+                        <option value="F">Fahrenheit (°F)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="toUnit">To</label>
+
+                    <select id="toUnit">
+                        <option value="F">Fahrenheit (°F)</option>
+                        <option value="C">Celsius (°C)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button id="convertBtn">
+                Convert Temperature
+            </button>
+
+            <button id="clearBtn" class="clear">
+                Clear
+            </button>
+
+            <div class="result" id="result">
+                Your result will appear here
+            </div>
+
+            <div id="formula" class="formula">
+                Conversion formula will appear here
+            </div>
+
+        </section>
+
+
+        <!-- SMART TEMPERATURE DASHBOARD -->
+
+        <section class="dashboard">
+
+            <h2>🌍 Temperature Monitoring</h2>
+
+            <p>Monitor your indoor and outdoor environment</p>
+
+            <div class="monitor-cards">
+
+                <!-- INDOOR -->
+
+                <div class="monitor-card indoor">
+
+                    <div class="card-icon">🏠</div>
+
+                    <h3>Indoor Temperature</h3>
+
+                    <p>Enter your room temperature manually</p>
+
+                    <input
+                        type="number"
+                        id="indoorTemp"
+                        placeholder="Enter room temperature"
+                    >
+
+                    <button id="indoorBtn">
+                        Update Indoor
+                    </button>
+
+                    <h2 id="indoorDisplay">-- °C</h2>
+
+                </div>
+
+
+                <!-- OUTDOOR -->
+
+                <div class="monitor-card outdoor">
+
+                    <div class="card-icon">🌤️</div>
+
+                    <h3>Outdoor Temperature</h3>
+
+                    <p>Live temperature using your location</p>
+
+                    <h2 id="outdoorDisplay">-- °C</h2>
+
+                    <p id="locationDisplay">
+                        Location not detected
+                    </p>
+
+                    <button id="weatherBtn">
+                        Get Live Temperature
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="weatherStatus">
+                Click to get outdoor temperature.
+            </p>
+
+        </section>
+
+
+        <!-- TEMPERATURE COMPARISON -->
+
+        <section class="comparison-section">
+
+            <h2>📊 Temperature Comparison</h2>
+
+            <p>Compare your indoor and outdoor temperature</p>
+
+            <div id="comparisonResult" class="result">
+                Update both temperatures to compare
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+            <p>🌡️ Smart Temperature Converter</p>
+            <p>Designed with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
